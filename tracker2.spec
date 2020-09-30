@@ -28,6 +28,8 @@ Group:		Graphical desktop/GNOME
 URL:		https://wiki.gnome.org/Projects/Tracker
 Source0:	https://download.gnome.org/sources/%{oname}/%{url_ver}/%{oname}-%{version}.tar.xz
 Source1:	30-tracker.conf
+
+BuildRequires:	dbus-daemon
 BuildRequires:	intltool
 BuildRequires:	gettext-devel
 BuildRequires:	icu-devel

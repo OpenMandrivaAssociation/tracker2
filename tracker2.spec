@@ -22,7 +22,7 @@
 Summary:	Desktop-neutral metadata-based search framework
 Name:		tracker2
 Version:	2.3.6
-Release:	%mkrel 1
+Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Graphical desktop/GNOME
 URL:		https://wiki.gnome.org/Projects/Tracker
@@ -55,7 +55,6 @@ BuildRequires:	vala
 BuildRequires:  locales
 Requires:	odt2txt
 
-# ovitters: the following package handles the indexing
 Recommends:	tracker2-miners
 
 
@@ -160,7 +159,6 @@ rm -rf %{buildroot}%{_libdir}/tracker-2.0/trackertestutils
 %{_mandir}/man1/tracker*.1*
 %{_datadir}/glib-2.0/schemas/org.freedesktop.Tracker.*
 %{_userunitdir}/tracker-store.service
-
 
 %files vala
 %{_datadir}/vala/vapi/%{oname}-control-%{api}.vapi

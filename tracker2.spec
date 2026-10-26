@@ -123,8 +123,6 @@ This package contains the documentation for tracker.
 
 %prep
 %setup -q -n %oname-%version
-# remove generated code, we want to build from the actual source files
-for i in `find . -name '*.vala'`; do rm -f ${i%.vala}.c; done
 %autopatch -p1
 
 %build

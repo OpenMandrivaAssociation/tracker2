@@ -1,0 +1,13 @@
+--- a/docs/tools/ttl2sgml.c
++++ b/docs/tools/ttl2sgml.c
+@@ -165,6 +165,10 @@
+ 		ttl_loader_load_ontology (ontology, ttl_file);
+ 		ttl_loader_load_ontology (file_ontology, ttl_file);
+ 		ttl_loader_load_prefix_from_description (ontology, description);
++		/* The chapter index is printed from file_ontology. Without this,
++		 * class hrefs stay full URIs and libxml2 rejects the # fragment.
++		 */
++		ttl_loader_load_prefix_from_description (file_ontology, description);
+ 
+ 		ttl_sgml_print (description, file_ontology, ttl_output_file, description_dir);
+ 

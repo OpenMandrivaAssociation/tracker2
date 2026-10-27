@@ -32,6 +32,9 @@ Source1:	30-tracker.conf
 Patch0:		tracker-2.3.6-backup-header.patch
 # SQLite is built with SQLITE_OMIT_SHARED_CACHE.
 Patch1:		tracker-2.3.6-sqlite-shared-cache.patch
+# Chapter index was built without the description prefix, so class
+# XIncludes kept a fragment. libxml2 2.15 rejects that.
+Patch2:		tracker-2.3.6-ontology-prefix.patch
 
 BuildRequires:	dbus-daemon
 BuildRequires:	intltool

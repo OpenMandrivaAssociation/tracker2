@@ -1,0 +1,13 @@
+--- a/src/libtracker-data/tracker-db-interface-sqlite.c
++++ b/src/libtracker-data/tracker-db-interface-sqlite.c
+@@ -174,7 +174,9 @@
+ void
+ tracker_db_interface_sqlite_enable_shared_cache (void)
+ {
+-	sqlite3_enable_shared_cache (1);
++	/* Built with SQLITE_OMIT_SHARED_CACHE. Leaving the cache private
++	 * is what current SQLite recommends.
++	 */
+ }
+ 
+ static void

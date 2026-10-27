@@ -30,6 +30,8 @@ Source0:	https://download.gnome.org/sources/%{oname}/%{url_ver}/%{oname}-%{versi
 Source1:	30-tracker.conf
 # valac 0.56 includes tracker-backup.h from generated C and does not write it.
 Patch0:		tracker-2.3.6-backup-header.patch
+# SQLite is built with SQLITE_OMIT_SHARED_CACHE.
+Patch1:		tracker-2.3.6-sqlite-shared-cache.patch
 
 BuildRequires:	dbus-daemon
 BuildRequires:	intltool

@@ -28,6 +28,8 @@ Group:		Graphical desktop/GNOME
 URL:		https://wiki.gnome.org/Projects/Tracker
 Source0:	https://download.gnome.org/sources/%{oname}/%{url_ver}/%{oname}-%{version}.tar.xz
 Source1:	30-tracker.conf
+# valac 0.56 includes tracker-backup.h from generated C and does not write it.
+Patch0:		tracker-2.3.6-backup-header.patch
 
 BuildRequires:	dbus-daemon
 BuildRequires:	intltool

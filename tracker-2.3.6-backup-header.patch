@@ -1,0 +1,7 @@
+--- /dev/null
++++ b/src/tracker-store/tracker-backup.h
+@@ -0,0 +1,4 @@
++/* valac 0.56 includes this from tracker-store.c and does not create it.
++ * That translation unit does not use the declarations, which stay in
++ * tracker-backup.c.
++ */
